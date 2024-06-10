@@ -1,0 +1,86 @@
+/*=========================================================================================
+    File Name: _layoutModern.scss
+    Description: Default layout styles
+    
+==========================================================================================*/
+
+
+/////////////////////////////////////////////////////////
+// NAVBAR
+/////////////////////////////////////////////////////////
+.vs-navbar.vx-navbar {
+    width: calc(100% - 0px - 0.0rem);
+    position: fixed;
+    border-radius: .5rem;
+    transition: all .5s;
+    z-index: 10000;
+
+    &.navbar-reduced {
+        width: calc(100% - #{$reduced-sidebar-width} - 0.1rem);
+    }
+
+    &.navbar-full {
+        width: calc(100% - 0.1rem);
+    }
+}
+
+
+
+/////////////////////////////////////////////////////////
+// CONTENT AREA
+/////////////////////////////////////////////////////////
+#content-area {
+    margin-left: 260px;
+    height: 100%;
+    transition: margin-left 0.5s;
+
+    .content-wrapper{
+        min-height: calc(100vh - 0.5rem);
+    }
+
+    &.content-area-reduced {
+        margin-left: $reduced-sidebar-width;
+    }
+
+    &.content-area-full {
+        margin-left: 0px;
+    }
+
+    .vx-navbar__search-input {
+        input {
+            border: none !important;
+        }
+
+        input:focus {
+            box-shadow: none;
+        }
+    }
+}
+.cart-item {
+    margin-left: -20px;
+}
+.font-size {
+    font-size: 0.8em;
+}
+.margins{
+    margin-top: -10px;
+    margin-bottom: -10px;
+}
+.grid-list-view-margins {
+    margin-top: -30px;
+    margin-bottom: -40px;
+}
+.router-view {
+    position: relative;
+    padding: $spacer;
+
+    .router-content {
+        margin-top: 2.1rem;
+    }
+
+    .content-area__heading {
+        h2{
+            color: #636363;
+        }
+    }
+}
